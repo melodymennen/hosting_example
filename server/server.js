@@ -7,10 +7,7 @@ const express = require('express')
 const app = express();
 app.use(bodyParser.json());
 
-app.get('/login', (req, res) => {
-    console.log('hi')
-    res.status(200).send('Gnarly dude')
-})
+app.use( express.static( `${__dirname}/../build` ) );
 
 const port = 3500;
 
